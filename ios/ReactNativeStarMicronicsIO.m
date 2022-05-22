@@ -27,6 +27,7 @@ RCT_EXPORT_MODULE()
         @"onScaleData",
         @"onScaleConnect",
         @"onScaleDisconnect",
+        @"onDiscoveryReady",
         @"onDiscoverScale",
     ];
 }
@@ -146,12 +147,10 @@ RCT_REMAP_METHOD(discoverScales, discoverResolver:(RCTPromiseResolveBlock)resolv
 }
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-//    NSLog(@"We are doing somethibng %ld", (long)central.state);
-
-//    switch (central.state) {
-//        case CBCentralManagerStatePoweredOn:
-//            [STARDeviceManager.sharedManager scanForScales];
-//            break;
+   switch (central.state) {
+       case CBCentralManagerStatePoweredOn:
+           [self sendEventWithName:@"onDiscoveryReady" body:Nil];
+           break;
 //        default:
 //            [STARDeviceManager.sharedManager stopScan];
 //            [_contents removeAllObjects];
