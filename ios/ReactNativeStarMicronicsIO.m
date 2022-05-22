@@ -151,6 +151,7 @@ RCT_REMAP_METHOD(discoverScales, discoverResolver:(RCTPromiseResolveBlock)resolv
        case CBCentralManagerStatePoweredOn:
            [self sendEventWithName:@"onDiscoveryReady" body:Nil];
            break;
+   }
 //        default:
 //            [STARDeviceManager.sharedManager stopScan];
 //            [_contents removeAllObjects];

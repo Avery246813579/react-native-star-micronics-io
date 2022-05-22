@@ -24,13 +24,19 @@ or if you are using React Native before version 0.60,
 ## Usage
 
 ### Setting up the package
-You need to setup the package for use by using the `setupScales` function. Use it inside a componentDidMount or before
-you use `discoverScales`
+You need to setup the package for use by using the `setupScales` function. You need to wait for the system to be setup 
+before you can discover the scales, you can use `onDiscoveryReady` to determine this. Use it inside a componentDidMount 
+or before you use `discoverScales`.
 
 ```javascript
-import {setupScales} from 'react-native-star-micronics-io';
+import {setupScales, registerStarListener} from 'react-native-star-micronics-io';
 
 setupScales();
+
+registerStarListener("onDiscoveryReady", (scale) => {
+  // we are ready to discover scales 
+});
+
 ```
 
 ### Discover a scale
