@@ -116,6 +116,13 @@ RCT_REMAP_METHOD(discoverScales, discoverResolver:(RCTPromiseResolveBlock)resolv
 
 }
 
+RCT_REMAP_METHOD(stopDiscoverScales, stopDiscoverResolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [STARDeviceManager.sharedManager stopScan];
+
+    NSLog(@"Stopping the search for scales");
+}
+
 - (void)manager:(STARDeviceManager *)manager didDiscoverScale:(STARScale *)scale error:(NSError *)error {
     NSLog(@"Discovered a scale [%@]", scale);
 

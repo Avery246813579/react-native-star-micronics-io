@@ -95,3 +95,12 @@ registerStarListener("onScaleData", (data) => {
 });
 ```
 
+### Stopping a scan
+If you want to stop scanning for new scales, use `stopDiscoverScales`.
+
+```javascript
+import {stopDiscoverScales} from 'react-native-star-micronics-io';
+
+stopDiscoverScales();
+```
+

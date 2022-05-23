@@ -5,6 +5,7 @@ import {NativeModules, NativeEventEmitter} from "react-native";
 const {ReactNativeStarMicronicsIO} = NativeModules;
 
 const {
+  stopDiscoverScales: _stopDiscoverScales,
   discoverScales: _discoverScales,
   connectScale: _connectScale,
   setupScales: _setupScales,
@@ -23,6 +24,13 @@ export async function setupScales() {
  */
 export async function discoverScales() {
   return _discoverScales();
+}
+
+/**
+ * Stops discovering scales
+ */
+export async function stopDiscoverScales() {
+  return _stopDiscoverScales();
 }
 
 /**
