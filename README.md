@@ -104,3 +104,12 @@ import {stopDiscoverScales} from 'react-native-star-micronics-io';
 stopDiscoverScales();
 ```
 
+### Disconnecting a scale
+If you want to disconnect the current reader, use the `disconnectScale` function. 
+
+```javascript
+import {disconnectScale} from 'react-native-star-micronics-io';
+
+disconnectScale(scale);
+```
+

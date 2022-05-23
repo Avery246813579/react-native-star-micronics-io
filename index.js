@@ -6,6 +6,7 @@ const {ReactNativeStarMicronicsIO} = NativeModules;
 
 const {
   stopDiscoverScales: _stopDiscoverScales,
+  disconnectScale: _disconnectScale,
   discoverScales: _discoverScales,
   connectScale: _connectScale,
   setupScales: _setupScales,
@@ -40,6 +41,15 @@ export async function stopDiscoverScales() {
  */
 export async function connectScale(scale) {
   return _connectScale(scale);
+}
+
+/**
+ * Disconnects a scale
+ *
+ * @param scale         The scale object that is returned from onDiscoverScale
+ * */
+export async function disconnectScale(scale) {
+  return _disconnectScale(scale);
 }
 
 /**

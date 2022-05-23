@@ -58,6 +58,17 @@ RCT_REMAP_METHOD(connectScale, scale:(NSDictionary *) scaleInfo connectScaleReso
     [STARDeviceManager.sharedManager connectScale:scale];
 }
 
+RCT_REMAP_METHOD(disconnectScale, disconnectScale:(NSDictionary *) scaleInfo connectScaleResolver:(RCTPromiseResolveBlock)resolve connectScaleRejecter:(RCTPromiseRejectBlock)reject)
+{
+    STARScale * scale = scaleDict[scaleInfo[@"id"]];
+
+    if (scale == Nil) {
+        return reject(@"SCALE_ERROR", @"Scale not found", Nil);
+    }
+
+    [STARDeviceManager.sharedManager disconnectScale:scale];
+}
+
 
 - (void)initDictionaries {
     unitDict = @{@(STARUnitInvalid): @"Invalid",
