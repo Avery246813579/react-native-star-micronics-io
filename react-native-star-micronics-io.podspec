@@ -20,9 +20,8 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/avery246813579/react-native-star-micronics-io.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift,plist}"
+  s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift}"
   s.requires_arc = true
-  s.resources = 'ios/**/*.plist'
 
   s.dependency "React"
   s.dependency "StarMgsIO"
