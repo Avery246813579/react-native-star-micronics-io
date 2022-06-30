@@ -1,6 +1,6 @@
 // ReactNativeBrotherPrintersModule.java
 
-package com.reactlibrary;
+package com.rnstarmicro;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

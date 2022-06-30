@@ -1,6 +1,6 @@
 // ReactNativeBrotherPrintersPackage.java
 
-package com.reactlibrary;
+package com.rnstarmicro;
 
 import java.util.Arrays;
 import java.util.Collections;
