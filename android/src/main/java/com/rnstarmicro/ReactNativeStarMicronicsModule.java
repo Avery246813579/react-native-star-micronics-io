@@ -1,4 +1,4 @@
-// ReactNativeBrotherPrintersModule.java
+// ReactNativeStarMicronicsModule.java
 
 package com.rnstarmicro;
 
@@ -7,18 +7,18 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
-public class ReactNativeBrotherPrintersModule extends ReactContextBaseJavaModule {
+public class ReactNativeStarMicronicsModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 
-    public ReactNativeBrotherPrintersModule(ReactApplicationContext reactContext) {
+    public ReactNativeStarMicronicsModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
 
     @Override
     public String getName() {
-        return "ReactNativeBrotherPrinters";
+        return "ReactNativeStarMicronics";
     }
 
     @ReactMethod
