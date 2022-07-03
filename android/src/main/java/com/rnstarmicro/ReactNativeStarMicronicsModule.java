@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 public class ReactNativeStarMicronicsModule extends ReactContextBaseJavaModule {
 
@@ -18,12 +19,21 @@ public class ReactNativeStarMicronicsModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "ReactNativeStarMicronics";
+        return "ReactNativeStarMicronicsIO";
     }
 
     @ReactMethod
-    public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
-        // TODO: Implement some actually useful functionality
-        callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
+    public void stopDiscoverScales(Promise promise) {
+        promise.resolve(null);
+    }
+
+    @ReactMethod
+    public void setupScales(Promise promise) {
+        promise.resolve(null);
+    }
+
+    @ReactMethod
+    public void discoverScales(Promise promise) {
+        promise.resolve(null);
     }
 }
